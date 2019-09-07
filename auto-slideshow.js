@@ -34,6 +34,8 @@ var theModal = (function () {
     function clickClose(event) {
         if (event.target === modal || event.target === x) {
             modal.style.display = "none";
+            st.style.display = "none";
+            a.style.display = "inline";
             clearTimeout(t);
             if (document.fullscreenElement) {
                 closeFullScreen();
