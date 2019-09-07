@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Slideshow</title>
+  <meta name="keywords" content="automatic slideshow, responsive, image gallery" />
+  <meta name="description" content="responsive image slideshow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="auto-slideshow.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Automatic Slideshow</h1>
+    <p>This is a responsive gallery and slideshow with automatic and manual
+    controls capable of being displayed in full screen and taking various sizes
+    and orientations.</p>
+  </header>
+
+  <!-- the responsive gallery separated into columns -->
+  <div class="row">
+    <div class="column">
+      <img id="1" class="slide" src="images/alicante-spain.jpg" alt="graffiti" />
+      <img id="2" class="slide" src="images/manzanillo-costa-rica.jpg" alt="horses" />
+      <img id="3" class="slide" src="images/southern-france.jpg" alt="south of France in winter" />
+    </div>
+    <div class="column">
+      <img id="4" class="slide" src="images/canterbury-new-hampshire.jpg" alt="owner built house" />
+      <img id="5" class="slide" src="images/somerville-massachusetts.jpg" alt="Knapp street" />
+      <img id="6" class="slide" src="images/fairview-cemetery-westford-massachusetts.jpg" alt="autumn in an old cemetery" />
+    </div>
+    <div class="column">
+      <img id="7" class="slide" src="images/seville-graffiti.jpg" alt="graffiti in Seville" />
+      <img id="8" class="slide" src="images/canyonlands-utah.jpg" alt="Canyonlands National Park" />
+      <img id="9" class="slide" src="images/seville-spain.jpg" alt="plaza in Seville" />
+    </div>
+    <div class="column">
+      <img id="10" class="slide" src="images/autumn-new-hampshire.jpg" alt="fall foliage in New Hampshire" />
+      <img id="11" class="slide" src="images/savannah-georgia.jpg" alt="historic houses in Savannah" />
+      <img id="12" class="slide" src="images/pamm-miami.jpg" alt="Perez Art Museum Miami" />
+      <img id="13" class="slide" src="images/moose-vermont.jpg" alt="moose quenching thirst in Vermont" />
+    </div>
+  </div>
+  
+  <!-- the modal for the responsive slideshow -->
+  <div id="slide-modal">
+    <div id="wrap">
+      <a id="close" class="controls">&#10006;</a>
+      <a id="expand" class="controls">&#9974;</a>
+      <a id="previous" class="controls">&#8672;</a>
+      <a id="next" class="controls">&#8674;</a>
+      <a id="stop" class="controls">&#10074;&#10074;</a>
+      <a id="automatic" class="controls">&#9658;</a>
+    </div>
+    <img id="modal-content" />
+  </div>
+
+  <footer>
+    <h2>Adam Franks</h2>
+    <ul>
+      <li><a href="https://github.com/adfranks" target="_blank">GitHub Profile</a></li>
+      <li><a href="http://adfranks.com/portfolio/portfolio.html" target="_blank">Portfolio</a></li>
+    </ul>
+  </footer>
+
+<script src="auto-slideshow.js"></script>
+
+</body> 
+
+</html> 
