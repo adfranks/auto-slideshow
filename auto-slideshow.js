@@ -113,7 +113,10 @@ var theModal = (function () {
     // Enable for full screen capability.
     exp.addEventListener("click", fullScreen);
     function fullScreen() {
-        if (document.fullscreenElement) {
+        if (document.fullscreenElement ||
+	    document.webkitFulscreenElement ||
+	    document.mozFullScreenElement ||
+	    document.msFullscreenElement) {
             closeFullScreen();
         } else if (modal.requestFullscreen) {
             modal.requestFullscreen();
@@ -137,4 +140,5 @@ var theModal = (function () {
             document.msExitFullscreen();
         }
     }
-})(); 
+ st.style.display = "none";
+        a.style.display = "inline";})(); 
