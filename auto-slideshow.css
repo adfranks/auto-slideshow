@@ -35,8 +35,8 @@ footer a:hover {
 }
 h1, h2, p {padding: 5px;}
 h1, h2 {line-height: 1;}
-h1 {font-size: 3em;}
-h2 {font-size: 2.5em;}
+h1 {font-size: 2.5em;}
+h2 {font-size: 1.5em;}
 p {font-size: 1.25em; line-height: 1.25;}
 ul {
   list-style-type: none; 
@@ -69,21 +69,26 @@ li {padding: 15px;}
   background-color: rgba(0,0,0,0.9);
   cursor: pointer;
 }
-#expand, #previous, #next {
-  display: none;
+#expand {
+  top: 1%;
+}
+#previous {
+  top: 6%;
+}
+#next {
+  top: 11%;
 }
 #automatic {
-  top: 2.2%;
-  left: 2.2%;
+  top: 16%;
 }
 #stop {
   display: none;
-  top: 2.2%;
-  left: 2.2%;
+  top: 16%;
 }
 #close {
-  top: 2.2%;
-  right: 2.2%;
+  top: 1%;
+  right: 0%;
+  margin-right: 3px;
 }
 #wrap {
   margin: 3px;
@@ -93,10 +98,10 @@ li {padding: 15px;}
   position: absolute;
   z-index: 2;
   padding: 5px 10px 5px 10px;
-  font-size: 120%;
   color: White;
   background-color: rgba(0,0,0,0.2);
   border-radius: 5px;
+  font-size: 60%;
   transition: background-color 0.3s, color 0.3s;
 }
 .row {
@@ -124,44 +129,20 @@ li {padding: 15px;}
     -ms-flex: 50%;
     max-width: 50%;
   }
-  .controls {font-size: 60%; margin-left: 3px;}
-  #expand, #previous, #next {display: inline;}
-  #expand {
-    top: 1%;
-    left: 0%;
-  }
-  #previous {
-    top: 6%;
-    left: 0%;
-  }
-  #next {
-    top: 11%;
-    left: 0%;
-  }
-  #automatic {
-    top: 16%;
-    left: 0%;
-  }
-  #stop {
-    top: 16%;
-    left: 0%;
-  }
-  #close {
-    top: 1%;
-    right: 0%;
-    margin-right: 3px;
-  }
 }
 
 /* Create four columns */
 @media screen and (min-width: 900px) {
   h1 {font-size: 5em;}
+  h2 {font-size: 2.5em;}
   .column {
     flex: 25%;
     -ms-flex: 25%;
     max-width: 25%;
   }
-  .controls {font-size: 120%;}
+  .controls {
+    font-size: 120%;
+  }
   #expand:hover, #previous:hover, #next:hover, #stop:hover, #automatic:hover, #close:hover {
     color: SlateGray;
   }
