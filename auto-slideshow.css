@@ -124,7 +124,7 @@ li {padding: 15px;}
     -ms-flex: 50%;
     max-width: 50%;
   }
-  .controls {font-size: 75%;}
+  .controls {font-size: 60%;}
   #expand, #previous, #next {display: inline;}
   #expand {
     top: 1%;
@@ -137,15 +137,16 @@ li {padding: 15px;}
   }
   #automatic {
     top: 16%;
-    left: 0%;
+    left: 1%;
   }
   #stop {
     top: 16%;
-    left: 0%;
+    left: 1%;
   }
   #close {
     top: 1%;
-    right: 1%;
+    right: 0%;
+    margin-right: 3px;
   }
 }
 
