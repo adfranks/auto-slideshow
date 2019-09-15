@@ -82,7 +82,7 @@ li {padding: 15px;}
 #close {
   top: 1.2%;
   right: 0%;
-  margin-right: 5px;
+  margin-right: 4px;
 }
 #wrap {
   margin: 3px;
@@ -123,6 +123,7 @@ li {padding: 15px;}
     -ms-flex: 50%;
     max-width: 50%;
   }
+  .controls {font-size: 75%;}
   #expand, #previous, #next {display: inline;}
   #expand {
     top: 1%;
