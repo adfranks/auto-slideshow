@@ -73,19 +73,19 @@ li {padding: 15px;}
   display: none;
 }
 #automatic {
-  top: 2%;
+  top: 1%;
 }
 #stop {
   display: none;
-  top: 2%;
+  top: 1%;
 }
 #close {
-  top: 2%;
+  top: 1%;
   right: 0%;
   margin-right: 3px;
 }
 #wrap {
-  margin: 3px;
+  margin: 5px;
   transition: font-size 0.3s, visibility 0.2s;
 }
 .controls {
