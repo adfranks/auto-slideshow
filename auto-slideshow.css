@@ -69,21 +69,15 @@ li {padding: 15px;}
   background-color: rgba(0,0,0,0.9);
   cursor: pointer;
 }
-#expand {
-  top: 1%;
-}
-#previous {
-  top: 6%;
-}
-#next {
-  top: 11%;
+#expand, #previous, #next {
+  display: none;
 }
 #automatic {
-  top: 16%;
+  top: 1%;
 }
 #stop {
   display: none;
-  top: 16%;
+  top: 1%;
 }
 #close {
   top: 1%;
@@ -141,6 +135,21 @@ li {padding: 15px;}
   }
   .controls {
     font-size: 120%;
+  }
+  #expand {
+    top: 1%;
+  }
+  #previous {
+    top: 6%;
+  }
+  #next {
+    top: 11%;
+  }
+  #automatic {
+    top: 16%;
+  }
+  #stop {
+    top: 16%;
   }
   #expand:hover, #previous:hover, #next:hover, #stop:hover, #automatic:hover, #close:hover {
     color: SlateGray;
