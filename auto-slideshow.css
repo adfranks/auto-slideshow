@@ -124,6 +124,10 @@ li {padding: 15px;}
     max-width: 50%;
   }
   .controls {font-size: 60%;}
+  #expand, #previous, #next, #automatic, #stop {
+    left: 0%;
+    margin-left: 6px;
+  }
   #expand, #previous, #next {
     display: inline;
   }
@@ -138,12 +142,10 @@ li {padding: 15px;}
   }
   #automatic {
     top: 16%;
-    left: 1%;
   }
   #stop {
     display: none;
-    top: 1%;
-    left: 1%;
+    top: 16%;
   }
   #close {
     top: 1%;
