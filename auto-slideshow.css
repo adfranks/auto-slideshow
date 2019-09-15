@@ -124,7 +124,7 @@ li {padding: 15px;}
     -ms-flex: 50%;
     max-width: 50%;
   }
-  .controls {font-size: 60%;}
+  .controls {font-size: 60%; margin-left: 3px;}
   #expand, #previous, #next {display: inline;}
   #expand {
     top: 1%;
