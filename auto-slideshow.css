@@ -123,19 +123,6 @@ li {padding: 15px;}
     -ms-flex: 50%;
     max-width: 50%;
   }
-}
-
-/* Create four columns */
-@media screen and (min-width: 900px) {
-  h1 {font-size: 5em;}
-  .column {
-    flex: 25%;
-    -ms-flex: 25%;
-    max-width: 25%;
-  }
-  .controls {
-    font-size: 120%;
-  }
   #expand, #previous, #next {display: inline;}
   #expand {
     top: 1%;
@@ -151,6 +138,19 @@ li {padding: 15px;}
   }
   #stop {
     top: 16%;
+  }
+}
+
+/* Create four columns */
+@media screen and (min-width: 900px) {
+  h1 {font-size: 5em;}
+  .column {
+    flex: 25%;
+    -ms-flex: 25%;
+    max-width: 25%;
+  }
+  .controls {
+    font-size: 120%;
   }
   #expand:hover, #previous:hover, #next:hover, #stop:hover, #automatic:hover, #close:hover {
     color: SlateGray;
