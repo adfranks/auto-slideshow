@@ -128,12 +128,15 @@ li {padding: 15px;}
   #expand, #previous, #next {display: inline;}
   #expand {
     top: 1%;
+    left: 0%;
   }
   #previous {
     top: 6%;
+    left: 0%;
   }
   #next {
     top: 11%;
+    left: 0%;
   }
   #automatic {
     top: 16%;
