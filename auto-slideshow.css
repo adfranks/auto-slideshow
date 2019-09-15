@@ -73,14 +73,14 @@ li {padding: 15px;}
   display: none;
 }
 #automatic {
-  top: 3%;
+  top: 2%;
 }
 #stop {
   display: none;
-  top: 3%;
+  top: 2%;
 }
 #close {
-  top: 3%;
+  top: 2%;
   right: 0%;
   margin-right: 3px;
 }
@@ -95,7 +95,7 @@ li {padding: 15px;}
   color: White;
   background-color: rgba(0,0,0,0.2);
   border-radius: 5px;
-  font-size: 70%;
+  font-size: 75%;
   transition: background-color 0.3s, color 0.3s;
 }
 .row {
