@@ -83,7 +83,6 @@ li {padding: 15px;}
   top: 1%;
   right: 0%;
   margin-right: 3px;
-  color: White;
 }
 #wrap {
   margin: 3px;
@@ -137,6 +136,7 @@ li {padding: 15px;}
   .controls {
     font-size: 120%;
   }
+  #expand, #previous, #next {display: inline;}
   #expand {
     top: 1%;
   }
