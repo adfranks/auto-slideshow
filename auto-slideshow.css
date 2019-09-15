@@ -73,17 +73,15 @@ li {padding: 15px;}
   display: none;
 }
 #automatic {
-  top: 1.1%;
-  left: 1%;
+  top: 1.2%;
 }
 #stop {
   display: none;
-  top: 1.1%;
-  left: 1%;
+  top: 1.2%;
 }
 #close {
-  top: 1.1%;
-  right: 1%;
+  top: 1.2%;
+  right: 0%;
   margin-right: 3px;
 }
 #wrap {
@@ -94,6 +92,7 @@ li {padding: 15px;}
   position: absolute;
   z-index: 2;
   padding: 5px 10px 5px 10px;
+  margin: 3px;
   font-size: 120%;
   color: White;
   background-color: rgba(0,0,0,0.2);
@@ -137,15 +136,12 @@ li {padding: 15px;}
   }
   #automatic {
     top: 16%;
-    left: 0%;
   }
   #stop {
     top: 16%;
-    left: 0%;
   }
   #close {
     top: 1%;
-    right: 0%;
   }
 }
 
