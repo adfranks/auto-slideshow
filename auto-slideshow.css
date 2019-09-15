@@ -153,6 +153,7 @@ li {padding: 15px;}
     -ms-flex: 25%;
     max-width: 25%;
   }
+  .controls {font-size: 120%;}
   #expand:hover, #previous:hover, #next:hover, #stop:hover, #automatic:hover, #close:hover {
     color: SlateGray;
   }
