@@ -74,14 +74,16 @@ li {padding: 15px;}
 }
 #automatic {
   top: 1.1%;
+  left: 1%;
 }
 #stop {
   display: none;
   top: 1.1%;
+  left: 1%;
 }
 #close {
   top: 1.1%;
-  right: 0%;
+  right: 1%;
   margin-right: 3px;
 }
 #wrap {
@@ -135,12 +137,15 @@ li {padding: 15px;}
   }
   #automatic {
     top: 16%;
+    left: 0%;
   }
   #stop {
     top: 16%;
+    left: 0%;
   }
   #close {
     top: 1%;
+    right: 0%;
   }
 }
 
