@@ -135,17 +135,17 @@ li {padding: 15px;}
     top: 7px;
   }
   #previous {
-    top: 17px;
+    top: 42px;
   }
   #next {
-    top: 27px;
+    top: 77px;
   }
   #automatic {
-    top: 77px;
+    top: 112px;
   }
   #stop {
     display: none;
-    top: 37px;
+    top: 112px;
   }
   #close {
     top: 7px;
