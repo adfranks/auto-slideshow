@@ -69,26 +69,20 @@ li {padding: 15px;}
   background-color: rgba(0,0,0,0.9);
   cursor: pointer;
 }
-#expand {
-  top: 1%;
-}
-#previous {
-  top: 6%;
-}
-#next {
-  top: 11%;
+#expand, #previous, #next {
+  display: none;
 }
 #automatic {
-  top: 16%;
+  top: 2.2%;
+  left: 2.2%;
 }
 #stop {
   display: none;
-  top: 16%;
+  top: 2.2%;
 }
 #close {
-  top: 1%;
-  right: 0%;
-  margin-right: 3px;
+  top: 2.2%;
+  right: 2.2%;
 }
 #wrap {
   margin: 3px;
@@ -101,7 +95,7 @@ li {padding: 15px;}
   color: White;
   background-color: rgba(0,0,0,0.2);
   border-radius: 5px;
-  font-size: 60%;
+  font-size: 120%;
   transition: background-color 0.3s, color 0.3s;
 }
 .row {
@@ -129,6 +123,35 @@ li {padding: 15px;}
     -ms-flex: 50%;
     max-width: 50%;
   }
+  .controls {font-size: 60%;}
+  #expand, #previous, #next, #automatic, #stop {
+    left: 0%;
+    margin-left: 6px;
+  }
+  #expand, #previous, #next {
+    display: inline;
+  }
+  #expand {
+    top: 10px;
+  }
+  #previous {
+    top: 45px;
+  }
+  #next {
+    top: 80px;
+  }
+  #automatic {
+    top: 115px;
+  }
+  #stop {
+    display: none;
+    top: 115px;
+  }
+  #close {
+    top: 10px;
+    right: 0%;
+    margin-right: 6px;
+  }
 }
 
 /* Create four columns */
@@ -140,9 +163,7 @@ li {padding: 15px;}
     -ms-flex: 25%;
     max-width: 25%;
   }
-  .controls {
-    font-size: 120%;
-  }
+  .controls {font-size: 100%;}
   #expand:hover, #previous:hover, #next:hover, #stop:hover, #automatic:hover, #close:hover {
     color: SlateGray;
   }
