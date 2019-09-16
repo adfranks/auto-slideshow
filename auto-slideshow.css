@@ -132,23 +132,23 @@ li {padding: 15px;}
     display: inline;
   }
   #expand {
-    top: 1%;
+    top: 7px;
   }
   #previous {
-    top: 6%;
+    top: 17px;
   }
   #next {
-    top: 11%;
+    top: 27px;
   }
   #automatic {
-    top: 16%;
+    top: 37px;
   }
   #stop {
     display: none;
-    top: 16%;
+    top: 37px;
   }
   #close {
-    top: 1%;
+    top: 7px;
     right: 0%;
     margin-right: 3px;
   }
