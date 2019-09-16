@@ -92,6 +92,28 @@ var theModal = (function () {
         clearTimeout(s);
     }
 
+    //  Allow for a moblie friendly swipe instead of left & right buttons.
+    modalImage.addEventListener("touchstart", getLoc);
+    function getLoc(event) {
+        beginning = event.touches[0].clientX;
+    }
+
+    modalImage.addEventListener("touchmove", getMoveLoc);
+    function getMoveLoc(event) {
+        ending = event.touches[0].clientX;
+    }
+    
+    modalImage.addEventListener("touchend", dirTouch);
+    function dirTouch(event) {
+	if (ending === null) {return;}
+	if (ending < (beginning - 50)) {
+	    changeSlide(1);
+	} else if (ending > (beginning + 50)) {
+	    changeSlide(-1)
+	}
+	ending = null;
+    }
+
     // Have the play and pause buttons display and work properly.
     a.addEventListener("click", auto);
     function auto() {
