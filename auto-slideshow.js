@@ -14,9 +14,7 @@ var theModal = (function () {
     exp = document.getElementById("expand"),
     slides = document.getElementsByClassName("slide"),
     slideNumber = 1,
-    h = window.innerHeight,
-    w = window.innerWidth,
-    s, t, i;
+    beginning, ending, s, t, i;
     
     // Make a click on the gallery image open the modal and display the image.
     for (i = 0; i < slides.length; i++) {
@@ -109,7 +107,7 @@ var theModal = (function () {
 	if (ending < (beginning - 50)) {
 	    changeSlide(1);
 	} else if (ending > (beginning + 50)) {
-	    changeSlide(-1)
+	    changeSlide(-1);
 	}
 	ending = null;
     }
@@ -154,13 +152,12 @@ var theModal = (function () {
     function closeFullScreen() {
         if (document.exitFullscreen) {
             document.exitFullscreen();
-        } else if (e.mozCancelFullScreen) {
+        } else if (document.mozCancelFullScreen) {
             document.mozCancelFullScreen();
-        } else if (e.webkitExitFullscreen) {
+        } else if (document.webkitExitFullscreen) {
             document.webkitExitFullscreen();
-        } else if (e.msExitFullscreen) {
+        } else if (document.msExitFullscreen) {
             document.msExitFullscreen();
         }
     }
- st.style.display = "none";
-        a.style.display = "inline";})(); 
+})(); 
