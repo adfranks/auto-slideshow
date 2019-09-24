@@ -2,7 +2,7 @@
 portrait and landscape orientations and does not overflow screen
 triggering the scroll bar.  Module pattern used to create the slideshow
 within the modal.  */
-var theModal = (function () {
+(function () {
     var modal = document.getElementById("slide-modal"),
     modalImage = document.getElementById("modal-content"),
     wrap = document.getElementById("wrap"),
@@ -160,4 +160,4 @@ var theModal = (function () {
             document.msExitFullscreen();
         }
     }
-})(); 
+}()); 
