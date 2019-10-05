@@ -103,13 +103,13 @@ within the modal.  */
     
     modalImage.addEventListener("touchend", dirTouch);
     function dirTouch(event) {
-	if (ending === null) {return;}
-	if (ending < (beginning - 50)) {
-	    changeSlide(1);
-	} else if (ending > (beginning + 50)) {
-	    changeSlide(-1);
-	}
-	ending = null;
+        if (ending === null) {return;}
+        if (ending < (beginning - 50)) {
+            changeSlide(1);
+        } else if (ending > (beginning + 50)) {
+            changeSlide(-1);
+        }
+        ending = null;
     }
 
     // Have the play and pause buttons display and work properly.
@@ -134,9 +134,9 @@ within the modal.  */
     exp.addEventListener("click", fullScreen);
     function fullScreen() {
         if (document.fullscreenElement ||
-	    document.webkitFulscreenElement ||
-	    document.mozFullScreenElement ||
-	    document.msFullscreenElement) {
+            document.webkitFulscreenElement ||
+            document.mozFullScreenElement ||
+            document.msFullscreenElement) {
             closeFullScreen();
         } else if (modal.requestFullscreen) {
             modal.requestFullscreen();
