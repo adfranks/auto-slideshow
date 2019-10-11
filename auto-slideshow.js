@@ -65,31 +65,6 @@ within the modal.  */
         }
     }
 
-    // Make another image appear with effects. 
-    function changeSlide(d) {
-        if (slideNumber == 1 && d === -1) {
-            slideNumber = slides.length;
-        } else if (slideNumber == slides.length && d === 1) {
-            slideNumber = 1;
-        } else {
-            slideNumber += d;
-        }
-        modalImage.style.opacity = "0";
-        modalImage.style.transform = "rotateY(90deg)";
-        modalImage.style.WebkitTransform = "rotateY(90deg)";
-        modalImage.style.msTransform = "rotateY(90deg)";
-        s = setTimeout(newSource, 500);
-    }
-
-    function newSource() {
-        modalImage.src = slides[slideNumber - 1].src;
-        modalImage.style.opacity = "1";
-        modalImage.style.transform = "rotateY(0deg)";
-        modalImage.style.WebkitTransform = "rotateY(0deg)";
-        modalImage.style.msTransform = "rotateY(0deg)";
-        clearTimeout(s);
-    }
-
     //  Allow for a moblie friendly swipe instead of left & right buttons.
     modalImage.addEventListener("touchstart", getLoc);
     function getLoc(event) {
@@ -159,5 +134,30 @@ within the modal.  */
         } else if (document.msExitFullscreen) {
             document.msExitFullscreen();
         }
+    }
+
+    // Make another image appear with effects. 
+    function changeSlide(d) {
+        if (slideNumber == 1 && d === -1) {
+            slideNumber = slides.length;
+        } else if (slideNumber == slides.length && d === 1) {
+            slideNumber = 1;
+        } else {
+            slideNumber += d;
+        }
+        modalImage.style.opacity = "0";
+        modalImage.style.transform = "rotateY(90deg)";
+        modalImage.style.WebkitTransform = "rotateY(90deg)";
+        modalImage.style.msTransform = "rotateY(90deg)";
+        s = setTimeout(newSource, 500);
+    }
+
+    function newSource() {
+        modalImage.src = slides[slideNumber - 1].src;
+        modalImage.style.opacity = "1";
+        modalImage.style.transform = "rotateY(0deg)";
+        modalImage.style.WebkitTransform = "rotateY(0deg)";
+        modalImage.style.msTransform = "rotateY(0deg)";
+        clearTimeout(s);
     }
 }()); 
