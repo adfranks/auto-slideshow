@@ -149,7 +149,7 @@ within the modal.  */
         modalImage.style.transform = "rotateY(90deg)";
         modalImage.style.WebkitTransform = "rotateY(90deg)";
         modalImage.style.msTransform = "rotateY(90deg)";
-        s = setTimeout(newSource, 600);
+        s = setTimeout(newSource, 700);
     }
 
     function newSource() {
