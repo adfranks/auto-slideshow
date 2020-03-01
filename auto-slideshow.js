@@ -154,10 +154,10 @@ within the modal.  */
 
     function newSource() {
         modalImage.src = slides[slideNumber - 1].src;
-        modalImage.style.opacity = "1";
         modalImage.style.transform = "rotateY(0deg)";
         modalImage.style.WebkitTransform = "rotateY(0deg)";
         modalImage.style.msTransform = "rotateY(0deg)";
+        modalImage.style.opacity = "1";
         clearTimeout(s);
     }
 }()); 
