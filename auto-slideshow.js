@@ -80,7 +80,7 @@ var theModal = (function () {
     }
 
     modalImage.style.transform = "rotateY(90deg)";
-    modalImage.style.WebkitTransform = "rotateY(90deg)";
+    modalImage.style.webkitTransform = "rotateY(90deg)";
     modalImage.style.msTransform = "rotateY(90deg)";
     modalImage.style.opacity = "0";
     s = setTimeout(newSource, 500);
@@ -89,7 +89,7 @@ var theModal = (function () {
   function newSource() {
     modalImage.src = slides[slideNumber - 1].src;
     modalImage.style.transform = "rotateY(0deg)";
-    modalImage.style.WebkitTransform = "rotateY(0deg)";
+    modalImage.style.webkitTransform = "rotateY(0deg)";
     modalImage.style.msTransform = "rotateY(0deg)";
     modalImage.style.opacity = "1";
     clearTimeout(s);
