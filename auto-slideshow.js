@@ -1,8 +1,8 @@
 /* Create a responsive slide show in a modal.  Criteria is it takes both
 portrait and landscape orientations and does not overflow screen
-triggering the scroll bar.  Module pattern used to create the slideshow
+triggering the scroll bar. IIFE used to create the slideshow
 within the modal.  */
-var theModal = (function () {
+(function () {
     var modal = document.getElementById("slide-modal"),
     modalImage = document.getElementById("modal-content"),
     wrap = document.getElementById("wrap"),
@@ -14,9 +14,7 @@ var theModal = (function () {
     exp = document.getElementById("expand"),
     slides = document.getElementsByClassName("slide"),
     slideNumber = 1,
-    h = window.innerHeight,
-    w = window.innerWidth,
-    s, t, i;
+    beginning, ending, s, t, i;
     
     // Make a click on the gallery image open the modal and display the image.
     for (i = 0; i < slides.length; i++) {
@@ -67,31 +65,26 @@ var theModal = (function () {
         }
     }
 
-    // Make another image appear with effects. 
-    function changeSlide(d) {
-        if (slideNumber == 1 && d === -1) {
-            slideNumber = slides.length;
-        } else if (slideNumber == slides.length && d === 1) {
-            slideNumber = 1;
-        } else {
-            slideNumber += d;
-        }
-        modalImage.style.opacity = "0";
-        modalImage.style.transform = "rotateY(90deg)";
-        modalImage.style.webkitTransform = "rotateY(90deg)";
-        modalImage.style.MozTransform = "rotateY(90deg)";
-        modalImage.style.msTransform = "rotateY(90deg)";
-        s = setTimeout(newSource, 600);
+    //  Allow for a moblie friendly swipe instead of left & right buttons.
+    modalImage.addEventListener("touchstart", getLoc);
+    function getLoc(event) {
+        beginning = event.touches[0].clientX;
     }
 
-    function newSource() {
-        modalImage.src = slides[slideNumber - 1].src;
-        modalImage.style.opacity = "1";
-        modalImage.style.transform = "rotateY(0deg)";
-        modalImage.style.webkitTransform = "rotateY(0deg)";
-        modalImage.style.MozTransform = "rotateY(0deg)";
-        modalImage.style.msTransform = "rotateY(0deg)";
-        clearTimeout(s);
+    modalImage.addEventListener("touchmove", getMoveLoc);
+    function getMoveLoc(event) {
+        ending = event.touches[0].clientX;
+    }
+    
+    modalImage.addEventListener("touchend", dirTouch);
+    function dirTouch(event) {
+        if (ending === null) {return;}
+        if (ending < (beginning - 50)) {
+            changeSlide(1);
+        } else if (ending > (beginning + 50)) {
+            changeSlide(-1);
+        }
+        ending = null;
     }
 
     // Have the play and pause buttons display and work properly.
@@ -116,9 +109,9 @@ var theModal = (function () {
     exp.addEventListener("click", fullScreen);
     function fullScreen() {
         if (document.fullscreenElement ||
-	    document.webkitFulscreenElement ||
-	    document.mozFullScreenElement ||
-	    document.msFullscreenElement) {
+            document.webkitFulscreenElement ||
+            document.mozFullScreenElement ||
+            document.msFullscreenElement) {
             closeFullScreen();
         } else if (modal.requestFullscreen) {
             modal.requestFullscreen();
@@ -134,13 +127,37 @@ var theModal = (function () {
     function closeFullScreen() {
         if (document.exitFullscreen) {
             document.exitFullscreen();
-        } else if (e.mozCancelFullScreen) {
+        } else if (document.mozCancelFullScreen) {
             document.mozCancelFullScreen();
-        } else if (e.webkitExitFullscreen) {
+        } else if (document.webkitExitFullscreen) {
             document.webkitExitFullscreen();
-        } else if (e.msExitFullscreen) {
+        } else if (document.msExitFullscreen) {
             document.msExitFullscreen();
         }
     }
- st.style.display = "none";
-        a.style.display = "inline";})(); 
+
+    // Make another image appear with effects. 
+    function changeSlide(d) {
+        if (slideNumber == 1 && d === -1) {
+            slideNumber = slides.length;
+        } else if (slideNumber == slides.length && d === 1) {
+            slideNumber = 1;
+        } else {
+            slideNumber += d;
+        }
+        modalImage.style.opacity = "0";
+        modalImage.style.transform = "rotateY(90deg)";
+        modalImage.style.WebkitTransform = "rotateY(90deg)";
+        modalImage.style.msTransform = "rotateY(90deg)";
+        s = setTimeout(newSource, 500);
+    }
+
+    function newSource() {
+        modalImage.src = slides[slideNumber - 1].src;
+        modalImage.style.transform = "rotateY(0deg)";
+        modalImage.style.WebkitTransform = "rotateY(0deg)";
+        modalImage.style.msTransform = "rotateY(0deg)";
+        modalImage.style.opacity = "1";
+        clearTimeout(s);
+    }
+}()); 
