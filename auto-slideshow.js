@@ -78,7 +78,8 @@ var theModal = (function () {
         }
         modalImage.style.opacity = "0";
         modalImage.style.transform = "rotateY(90deg)";
-        modalImage.style.WebkitTransform = "rotateY(90deg)";
+        modalImage.style.webkitTransform = "rotateY(90deg)";
+        modalImage.style.MozTransform = "rotateY(90deg)";
         modalImage.style.msTransform = "rotateY(90deg)";
         s = setTimeout(newSource, 600);
     }
@@ -87,7 +88,8 @@ var theModal = (function () {
         modalImage.src = slides[slideNumber - 1].src;
         modalImage.style.opacity = "1";
         modalImage.style.transform = "rotateY(0deg)";
-        modalImage.style.WebkitTransform = "rotateY(0deg)";
+        modalImage.style.webkitTransform = "rotateY(0deg)";
+        modalImage.style.MozTransform = "rotateY(0deg)";
         modalImage.style.msTransform = "rotateY(0deg)";
         clearTimeout(s);
     }
