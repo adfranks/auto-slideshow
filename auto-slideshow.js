@@ -73,10 +73,8 @@ within the modal.  */
   // Enable for full screen capability.
   exp.addEventListener("click", fullScreen);
   function fullScreen() {
-    if (document.fullscreenElement ||
-      document.webkitFulscreenElement ||
-      document.mozFullScreenElement ||
-      document.msFullscreenElement) {
+    if (document.fullscreenElement || document.webkitFulscreenElement ||
+    document.mozFullScreenElement || document.msFullscreenElement) {
       closeFullScreen();
     } else if (modal.requestFullscreen) {
       modal.requestFullscreen();
@@ -132,7 +130,7 @@ within the modal.  */
     } else {
       slideNumber += d;
     }
-    modalImage.style.opacity = "0";
+    modalImage.style.opacity = "0.4";
     modalImage.style.transform = "rotateY(90deg)";
     modalImage.style.webkitTransform = "rotateY(90deg)";
     modalImage.style.MozTransform = "rotateY(90deg)";
