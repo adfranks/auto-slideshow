@@ -29,7 +29,7 @@ within the modal.  */
 
   // Allow the user to close the modal easily.
   window.addEventListener("click", clickClose);
-  window.addEventListener("touchstart", clickClose);
+  window.addEventListener("touchend", clickClose);
   function clickClose(event) {
     if (event.target === x || event.target === modal) {
       modal.style.display = "none";
@@ -130,7 +130,7 @@ within the modal.  */
     } else {
       slideNumber += d;
     }
-    modalImage.style.opacity = "0.4";
+    modalImage.style.opacity = "0";
     modalImage.style.transform = "rotateY(90deg)";
     modalImage.style.webkitTransform = "rotateY(90deg)";
     modalImage.style.MozTransform = "rotateY(90deg)";
