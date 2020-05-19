@@ -41,20 +41,6 @@ within the modal.  */
     }
   }
 
-  // Show and hide the next and previous buttons.
-  window.addEventListener("mouseover", showControls);
-  window.addEventListener("mouseout", hideControls);
-
-  function showControls() {
-    wrap.style.fontSize = "100%";
-    wrap.style.visibility = "visible";
-  }
-
-  function hideControls() {
-    wrap.style.fontSize = "0%";
-    wrap.style.visibility = "hidden";
-  }
-
   // Activate the next and previous buttons.
   window.addEventListener("click", addE);
   function addE(event) {
@@ -63,28 +49,6 @@ within the modal.  */
     } else if (event.target === p) {
       changeSlide(-1);
     }
-  }
-
-  //  Allow for a moblie friendly swipe instead of left & right buttons.
-  modalImage.addEventListener("touchstart", getLoc);
-  function getLoc(event) {
-    beginning = event.touches[0].clientX;
-  }
-
-  modalImage.addEventListener("touchmove", getMoveLoc);
-  function getMoveLoc(event) {
-    ending = event.touches[0].clientX;
-  }
-  
-  modalImage.addEventListener("touchend", dirTouch);
-  function dirTouch(event) {
-    if (ending === null) {return;}
-    if (ending < (beginning - 50)) {
-      changeSlide(1);
-    } else if (ending > (beginning + 50)) {
-      changeSlide(-1);
-    }
-    ending = null;
   }
 
   // Have the play and pause buttons display and work properly.
@@ -136,6 +100,28 @@ within the modal.  */
     }
   }
 
+  //  Allow for a moblie friendly swipe instead of left & right buttons.
+  modalImage.addEventListener("touchstart", getLoc);
+  function getLoc(event) {
+    beginning = event.touches[0].clientX;
+  }
+
+  modalImage.addEventListener("touchmove", getMoveLoc);
+  function getMoveLoc(event) {
+    ending = event.touches[0].clientX;
+  }
+  
+  modalImage.addEventListener("touchend", dirTouch);
+  function dirTouch(event) {
+    if (ending === null) {return;}
+    if (ending < (beginning - 50)) {
+      changeSlide(1);
+    } else if (ending > (beginning + 50)) {
+      changeSlide(-1);
+    }
+    ending = null;
+  }
+
   // Make another image appear with effects. 
   function changeSlide(d) {
     if (slideNumber == 1 && d === -1) {
@@ -161,5 +147,19 @@ within the modal.  */
     modalImage.style.msTransform = "rotateY(0deg)";
     modalImage.style.opacity = "1";
     clearTimeout(s);
+  }
+
+  // Show and hide the next and previous buttons.
+  window.addEventListener("mouseover", showControls);
+  window.addEventListener("mouseout", hideControls);
+
+  function showControls() {
+    wrap.style.fontSize = "100%";
+    wrap.style.visibility = "visible";
+  }
+
+  function hideControls() {
+    wrap.style.fontSize = "0%";
+    wrap.style.visibility = "hidden";
   }
 }()); 
