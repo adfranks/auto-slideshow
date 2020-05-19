@@ -100,7 +100,7 @@ within the modal.  */
     }
   }
 
-  //  Allow for a moblie friendly swipe instead of left & right buttons.
+  /*  Allow for a moblie friendly swipe instead of left & right buttons.
   modalImage.addEventListener("touchstart", getLoc);
   function getLoc(event) {
     beginning = event.touches[0].clientX;
@@ -120,7 +120,7 @@ within the modal.  */
       changeSlide(-1);
     }
     ending = null;
-  }
+  } */
 
   // Make another image appear with effects. 
   function changeSlide(d) {
