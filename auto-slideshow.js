@@ -30,15 +30,13 @@ within the modal.  */
   // Allow the user to close the modal easily.
   modal.addEventListener("click", clickClose);
   modal.addEventListener("touchend", clickClose);
-  function clickClose(event) {
-    if (event.target === x || event.target === modal) {
-      modal.style.display = "none";
-      st.style.display = "none";
-      a.style.display = "inline";
-      clearTimeout(t);
-      if (document.fullscreenElement) {
-        closeFullScreen();
-      }
+  function clickClose() {
+    modal.style.display = "none";
+    st.style.display = "none";
+    a.style.display = "inline";
+    clearTimeout(t);
+    if (document.fullscreenElement) {
+      closeFullScreen();
     }
   }
 
