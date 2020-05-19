@@ -29,7 +29,7 @@ within the modal.  */
 
   // Allow the user to close the modal easily.
   window.addEventListener("click", clickClose);
-  x.addEventListener("touchstart", clickClose);
+  window.addEventListener("touchstart", clickClose);
   function clickClose(event) {
     if (event.target === x || event.target === modal) {
       modal.style.display = "none";
