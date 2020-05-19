@@ -29,6 +29,7 @@ within the modal.  */
 
   // Allow the user to close the modal easily.
   window.addEventListener("click", clickClose);
+  window.addEventListener("touchstart", clickClose);
   function clickClose(event) {
     if (event.target === x || event.target === modal) {
       modal.style.display = "none";
@@ -100,7 +101,7 @@ within the modal.  */
     }
   }
 
-  /*  Allow for a moblie friendly swipe instead of left & right buttons.
+  //  Allow for a moblie friendly swipe instead of left & right buttons.
   modalImage.addEventListener("touchstart", getLoc);
   function getLoc(event) {
     beginning = event.touches[0].clientX;
@@ -120,7 +121,7 @@ within the modal.  */
       changeSlide(-1);
     }
     ending = null;
-  } */
+  }
 
   // Make another image appear with effects. 
   function changeSlide(d) {
