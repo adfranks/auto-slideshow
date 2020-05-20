@@ -28,17 +28,16 @@ within the modal.  */
   }
 
   // Allow the user to close the modal easily.
-  window.addEventListener("click", clickClose);
-  x.addEventListener("touchstart", clickClose);
+  modal.addEventListener("click", clickClose);
+  x.addEventListener("click", clickClose);
   function clickClose(event) {
-    if (event.target === x || event.target === modal) {
-      modal.style.display = "none";
-      st.style.display = "none";
-      a.style.display = "inline";
-      clearTimeout(t);
-      if (document.fullscreenElement) {
-        closeFullScreen();
-      }
+    modal.style.display = "none";
+    st.style.display = "none";
+    a.style.display = "inline";
+    clearTimeout(t);
+
+    if (document.fullscreenElement) {
+      closeFullScreen();
     }
   }
 
@@ -130,6 +129,8 @@ within the modal.  */
     } else {
       slideNumber += d;
     }
+
+    modalImage.style.opacity = 0;
     modalImage.style.transform = "rotateY(90deg)";
     modalImage.style.webkitTransform = "rotateY(90deg)";
     modalImage.style.MozTransform = "rotateY(90deg)";
@@ -143,6 +144,7 @@ within the modal.  */
     modalImage.style.webkitTransform = "rotateY(0deg)";
     modalImage.style.MozTransform = "rotateY(0deg)";
     modalImage.style.msTransform = "rotateY(0deg)";
+    modalImage.style.opacity = 1;
     clearTimeout(s);
   }
 
