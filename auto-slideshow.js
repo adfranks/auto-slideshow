@@ -28,16 +28,18 @@ within the modal.  */
   }
 
   // Allow the user to close the modal easily.
-  modal.addEventListener("click", clickClose);
-  x.addEventListener("click", clickClose);
+  window.addEventListener("click", clickClose);
+  x.addEventListener("touchstart", clickClose);
   function clickClose(event) {
-    modal.style.display = "none";
-    st.style.display = "none";
-    a.style.display = "inline";
-    clearTimeout(t);
+    if (event.target === x || event.target === modal) {
+      modal.style.display = "none";
+      st.style.display = "none";
+      a.style.display = "inline";
+      clearTimeout(t);
 
-    if (document.fullscreenElement) {
-      closeFullScreen();
+      if (document.fullscreenElement) {
+        closeFullScreen();
+      }
     }
   }
 
