@@ -135,7 +135,7 @@ within the modal.  */
 
     modalImage.style.opacity = 0;
     modalImage.style.transform = "scaleY(0)";
-    modalImage.style.webkitTransform = "rotateY(90deg)";
+    modalImage.style.webkitTransform = "scaleY(0)";
     modalImage.style.MozTransform = "rotateY(90deg)";
     modalImage.style.msTransform = "rotateY(90deg)";
   
@@ -144,7 +144,7 @@ within the modal.  */
   function newSource() {
     modalImage.src = slides[slideNumber - 1].src;
     modalImage.style.transform = "scaleY(1)";
-    modalImage.style.webkitTransform = "rotateY(0deg)";
+    modalImage.style.webkitTransform = "scaleY(1)";
     modalImage.style.MozTransform = "rotateY(0deg)";
     modalImage.style.msTransform = "rotateY(0deg)";
     modalImage.style.opacity = 1;
