@@ -133,17 +133,17 @@ within the modal.  */
       slideNumber += d;
     }
 
-    modalImage.style.opacity = 1;
-    modalImage.style.transform = "rotateY(30deg)";
-    modalImage.style.webkitTransform = "rotateY(30deg)";
-    modalImage.style.MozTransform = "rotateY(30deg)";
-    modalImage.style.msTransform = "rotateY(30deg)";
+    modalImage.style.opacity = 0;
+    modalImage.style.transform = "scaleY(0)";
+    modalImage.style.webkitTransform = "rotateY(90deg)";
+    modalImage.style.MozTransform = "rotateY(90deg)";
+    modalImage.style.msTransform = "rotateY(90deg)";
   
   }
 
   function newSource() {
     modalImage.src = slides[slideNumber - 1].src;
-    modalImage.style.transform = "rotateY(0deg)";
+    modalImage.style.transform = "scaleY(1)";
     modalImage.style.webkitTransform = "rotateY(0deg)";
     modalImage.style.MozTransform = "rotateY(0deg)";
     modalImage.style.msTransform = "rotateY(0deg)";
