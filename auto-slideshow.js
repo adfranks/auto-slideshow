@@ -75,7 +75,7 @@ within the modal.  */
   // Enable for full screen capability.
   exp.addEventListener("click", fullScreen);
   function fullScreen() {
-    if (document.fullscreenElement || document.webkitFulscreenElement ||
+    if (document.fullscreenElement || document.webkitFullscreenElement ||
     document.mozFullScreenElement || document.msFullscreenElement) {
       closeFullScreen();
     } else if (modal.requestFullscreen) {
