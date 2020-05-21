@@ -29,6 +29,7 @@ within the modal.  */
 
   // Allow the user to close the modal easily.
   window.addEventListener("click", clickClose);
+  modal.addEventListener("click", clickClose);
   x.addEventListener("click", clickClose);
   function clickClose(event) {
     if (event.target === x || event.target === modal) {
