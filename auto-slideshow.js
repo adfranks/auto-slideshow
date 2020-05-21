@@ -134,11 +134,11 @@ within the modal.  */
     }
 
     modalImage.style.opacity = 0;
-    modalImage.style.transform = "rotateY(90deg)";
-    modalImage.style.webkitTransform = "rotateY(90deg)";
-    modalImage.style.MozTransform = "rotateY(90deg)";
-    modalImage.style.msTransform = "rotateY(90deg)";
-    s = setTimeout(newSource, 500);
+    modalImage.style.transform = "rotateY(30deg)";
+    modalImage.style.webkitTransform = "rotateY(30deg)";
+    modalImage.style.MozTransform = "rotateY(30deg)";
+    modalImage.style.msTransform = "rotateY(30deg)";
+  
   }
 
   function newSource() {
