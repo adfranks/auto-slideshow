@@ -134,19 +134,19 @@ within the modal.  */
     }
 
     modalImage.style.opacity = 0;
-    modalImage.style.transform = "scaleY(0)";
-    modalImage.style.webkitTransform = "scaleY(0)";
-    modalImage.style.MozTransform = "scaleY(0)";
-    modalImage.style.msTransform = "scaleY(0)";
+    modalImage.style.transform = "scaleX(0)";
+    modalImage.style.webkitTransform = "scaleX(0)";
+    modalImage.style.MozTransform = "scaleX(0)";
+    modalImage.style.msTransform = "scaleX(0)";
     s = setTimeout(newSource, 500);
   }
 
   function newSource() {
     modalImage.src = slides[slideNumber - 1].src;
-    modalImage.style.transform = "scaleY(1)";
-    modalImage.style.webkitTransform = "scaleY(1)";
-    modalImage.style.MozTransform = "scaleY(1)";
-    modalImage.style.msTransform = "scaleY(1)";
+    modalImage.style.transform = "scaleX(1)";
+    modalImage.style.webkitTransform = "scaleX(1)";
+    modalImage.style.MozTransform = "scaleX(1)";
+    modalImage.style.msTransform = "scaleX(1)";
     modalImage.style.opacity = 1;
     clearTimeout(s);
   }
