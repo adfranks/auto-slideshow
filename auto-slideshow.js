@@ -133,7 +133,7 @@ within the modal.  */
       slideNumber += d;
     }
 
-    modalImage.style.opacity = 0;
+    modalImage.style.opacity = 1;
     modalImage.style.transform = "rotateY(30deg)";
     modalImage.style.webkitTransform = "rotateY(30deg)";
     modalImage.style.MozTransform = "rotateY(30deg)";
