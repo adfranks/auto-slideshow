@@ -34,6 +34,7 @@ main {
   padding: 0 3px;
 }
 footer {
+  font-size: 0.75em;
   font-family: Garamond, serif;
   letter-spacing: 1px;
 }
